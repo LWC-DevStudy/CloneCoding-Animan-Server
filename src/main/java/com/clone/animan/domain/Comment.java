@@ -16,8 +16,6 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@NoArgsConstructor
-@Getter
 public class Comment extends TimeStamped{
 
     @Id
