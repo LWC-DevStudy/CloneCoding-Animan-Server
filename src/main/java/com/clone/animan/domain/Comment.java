@@ -1,11 +1,20 @@
 package com.clone.animan.domain;
 
+
 import com.clone.animan.dto.request.CommentRequestDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
+import lombok.AllArgsConstructor;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @NoArgsConstructor
 @Getter
