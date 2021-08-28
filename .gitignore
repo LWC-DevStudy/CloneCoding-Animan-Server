@@ -6,6 +6,11 @@ build/
 !**/src/test/**/build/
 
 application.properties
+
+spring:
+  profiles:
+    include: oauth
+
 ### STS ###
 .apt_generated
 .classpath
