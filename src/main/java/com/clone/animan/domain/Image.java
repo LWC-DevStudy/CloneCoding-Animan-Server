@@ -20,8 +20,11 @@ public class Image {
     @Column(nullable = false)
     private String productImage;
 
+
+
     //https://ict-nroo.tistory.com/125     오직 읽을수만 있게 해준거 같음
     @ManyToOne
     @JoinColumn(name = "product_id", insertable = false, updatable = false)
     private Product product;
+
 }
