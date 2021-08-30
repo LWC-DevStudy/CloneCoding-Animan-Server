@@ -14,6 +14,11 @@ public class ProductService {
     private final ProductRepository productRepository;
 
     public List<Product> getProducts(String category) {
-        return productRepository.findAllByCategory(category);
+        if(category.equals("all")) {
+            return productRepository.findAll();
+        }
+        else {
+            return productRepository.findAllByCategory(category);
+        }
     }
 }
