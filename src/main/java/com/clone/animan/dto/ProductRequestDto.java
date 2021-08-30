@@ -1,9 +1,6 @@
 package com.clone.animan.dto;
 
-import com.clone.animan.domain.Image;
 import lombok.Getter;
-
-import java.util.List;
 
 @Getter
 public class ProductRequestDto {
@@ -11,5 +8,6 @@ public class ProductRequestDto {
     private String title;
     private Long price;
     private String category;
-    private List<Image> image;
+    private String productImage;
+
 }
