@@ -1,7 +1,7 @@
-/*
 package com.clone.animan.domain;
 
 
+import com.clone.animan.dto.CartRequestDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -33,9 +33,21 @@ public class Cart {
     @Column(nullable = false)
     private Long quantity;
 
-    public Cart(Long productId, Long quantity) {
-        this.productId = productId;
+    @Column(nullable = false)
+    private String username;
+
+    @Column(nullable = false)
+    private String title;
+
+    public void update(Long quantity) {
         this.quantity = quantity;
     }
+
+    public Cart(CartRequestDto requestDto) {
+        this.productId = requestDto.getProductId();
+        this.quantity = requestDto.getQuantity();
+        this.price = requestDto.getPrice();
+        this.username = requestDto.getUsername();
+        this.title = requestDto.getTitle();
+    }
 }
-*/
