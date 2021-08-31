@@ -2,6 +2,7 @@ package com.clone.animan.domain;
 
 
 import com.clone.animan.dto.CartRequestDto;
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,11 +25,12 @@ public class Cart {
     @Column(nullable = false)
     private Long price;
 
-    @Column(nullable = false)
+    @Column
+    @NotNull
     private String productImage;
 
-    @Column(nullable = false)
-    private boolean isWished;
+/*    @Column(nullable = false)
+    private boolean isWished;*/
 
     @Column(nullable = false)
     private Long quantity;

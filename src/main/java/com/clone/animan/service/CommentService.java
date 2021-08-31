@@ -1,5 +1,4 @@
 package com.clone.animan.service;
-
 import com.clone.animan.domain.Comment;
 import com.clone.animan.dto.request.CommentRequestDto;
 import com.clone.animan.repository.CommentRepository;

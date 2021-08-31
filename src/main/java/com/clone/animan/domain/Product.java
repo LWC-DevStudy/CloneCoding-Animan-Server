@@ -1,6 +1,7 @@
 package com.clone.animan.domain;
 
 import com.clone.animan.dto.ProductRequestDto;
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,9 +28,9 @@ public class Product {
     @Column(nullable = false)
     private String category;
 
+    @NotNull
     @Column(nullable = false)
     private String productImage;
-
 
     public Product(ProductRequestDto productRequestDto) {
         this.title = productRequestDto.getTitle();

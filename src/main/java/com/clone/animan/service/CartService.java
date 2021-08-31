@@ -17,7 +17,7 @@ public class CartService {
     private final CartRepository cartRepository;
 
     public List<Cart> getCart(String username) {
-        return cartRepository.findAllByUsername(username);
+            return cartRepository.findAllByUsername(username);
     }
 
     //가격 계산은 프론트쪽에서 하게 될거임 그냥 가격과 갯수만 내려주자
@@ -25,8 +25,6 @@ public class CartService {
 //만약 productId가 이미 cart테이블에 존재한다면
         Optional<Cart> productIdCheck = productIdChecker(productId);
         if(productIdCheck.isPresent()) {
-            //Cart cart = cartRepository.findCartBy(productId);
-            //Long orgQuantity = cart.getQuantity();
             Long quantity = requestDto.getQuantity();
             updateCart(productId, quantity);
         }
@@ -35,7 +33,6 @@ public class CartService {
             cartRepository.save(cart);
         }
     }
-
 
     private Optional<Cart> productIdChecker(Long productId) {
         return cartRepository.findById(productId);
