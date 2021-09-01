@@ -28,8 +28,8 @@ public class CartController {
         cartService.createCart(productId, requestDto);
     }
 
-    @DeleteMapping("/cart/{productId}")
-    public void deleteCart(@PathVariable Long productId) {
-        cartService.deleteCart(productId);
+    @DeleteMapping("/cart/{cartId}")
+    public void deleteCart(@PathVariable Long cartId) {
+        cartService.deleteCart(cartId);
     }
 }

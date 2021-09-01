@@ -2,7 +2,6 @@ package com.clone.animan.domain;
 
 
 import com.clone.animan.dto.CartRequestDto;
-import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,8 +24,7 @@ public class Cart {
     @Column(nullable = false)
     private Long price;
 
-    @Column
-    @NotNull
+    @Column(nullable = true)
     private String productImage;
 
 /*    @Column(nullable = false)
@@ -50,6 +48,7 @@ public class Cart {
         this.quantity = requestDto.getQuantity();
         this.price = requestDto.getPrice();
         this.username = requestDto.getUsername();
+        this.productImage = requestDto.getProductImage();
         this.title = requestDto.getTitle();
     }
 }
