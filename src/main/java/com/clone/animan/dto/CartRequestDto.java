@@ -4,6 +4,7 @@ import lombok.Getter;
 
 @Getter
 public class CartRequestDto {
+    private Long cartId;
     private Long quantity;
     private Long productId;
     private String title;
