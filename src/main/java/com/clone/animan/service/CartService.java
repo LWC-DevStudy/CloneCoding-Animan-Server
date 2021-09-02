@@ -48,6 +48,14 @@ public class CartService {
         cartRepository.save(cart);
     }
 
+    public void updateQuantityCart(Long productId, CartRequestDto requestDto) {
+        String username = requestDto.getUsername();
+        Long quantity = requestDto.getQuantity();
+        Cart cart = cartRepository.findByProductIdAndUsername(productId, username);
+        cart.update(quantity);
+        cartRepository.save(cart);
+    }
+
     public void deleteCart(Long cartId){
         cartRepository.deleteById(cartId);
     }

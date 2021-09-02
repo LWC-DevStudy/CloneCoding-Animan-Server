@@ -28,6 +28,11 @@ public class CartController {
         cartService.createCart(productId, requestDto);
     }
 
+    @PutMapping("/cart/update/{productId}")
+    public void updateCart(@PathVariable Long productId, @RequestBody CartRequestDto requestDto) {
+        cartService.updateQuantityCart(productId, requestDto);
+    }
+
     @DeleteMapping("/cart/{cartId}")
     public void deleteCart(@PathVariable Long cartId) {
         cartService.deleteCart(cartId);
