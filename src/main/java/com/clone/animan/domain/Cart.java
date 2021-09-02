@@ -24,11 +24,11 @@ public class Cart {
     @Column(nullable = false)
     private Long price;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String productImage;
 
-    @Column(nullable = false)
-    private boolean isWished;
+/*    @Column(nullable = false)
+    private boolean isWished;*/
 
     @Column(nullable = false)
     private Long quantity;
@@ -48,6 +48,7 @@ public class Cart {
         this.quantity = requestDto.getQuantity();
         this.price = requestDto.getPrice();
         this.username = requestDto.getUsername();
+        this.productImage = requestDto.getProductImage();
         this.title = requestDto.getTitle();
     }
 }

@@ -8,6 +8,7 @@ public class CartRequestDto {
     private Long productId;
     private String title;
     private Long price;
+    private String productImage;
     private String username;
-    private boolean isWished;
+    //private boolean isWished;
 }
